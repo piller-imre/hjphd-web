@@ -8,10 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.js"></script>
+    <script src="http://code.angularjs.org/1.5.3/angular-resource.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js"></script>
+
+    <script src="app.js"></script>
 </head>
 
-<body>
+<body data-ng-app="hjphd">
 
 <div class="container-fluid">
     <div class="page-header">
@@ -20,18 +28,18 @@
     <div class="row content">
         <div class="col-sm-3 sidenav">
             <ul>
-                <li>Hírek</li>
-                <li>Doktori Iskola</li>
-                <li>Doktoranduszok</li>
-                <li>Oktatás</li>
-                <li>Szabályzatok</li>
-                <li>Doktori Értekezések</li>
-                <li>Hasznos Linkek</li>
-                <li>Alumni</li>
+                <li><a ui-sref="hirek">Hírek</a></li>
+                <li><a ui-sref="iskola">Doktori Iskola</a></li>
+                <li><a ui-sref="doktoranduszok">Doktoranduszok</a></li>
+                <li><a ui-sref="oktatas">Oktatás</a></li>
+                <li><a ui-sref="szabalyzatok">Szabályzatok</a></li>
+                <li><a ui-sref="ertekezesek">Doktori Értekezések</a></li>
+                <li><a ui-sref="linkek">Hasznos Linkek</a></li>
+                <li><a ui-sref="alumni">Alumni</a></li>
             </ul>
         </div>
         <div class="col-sm-9">
-            <h3>Hírek ...</h3>
+            <ui-view></ui-view>
         </div>
     </div>
 </div>
