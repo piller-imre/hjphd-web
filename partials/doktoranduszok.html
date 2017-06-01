@@ -42,3 +42,20 @@
     </ul>
 </div>
 
+<h2>Abszolutóriumot szereztek</h2>
+
+<table>
+    <tr>
+        <th>Sorszám</th>
+        <th>Név</th>
+        <th>Év</th>
+        <th>Témavezető</th>
+    </tr>
+    <tr data-ng-repeat="hallgato in absolutoriums">
+        <td>{{ hallgato["id"] }}</td>
+        <td>{{ hallgato["name"] }}</td>
+        <td>{{ hallgato["year"] }}</td>
+        <td>{{ hallgato["supervisor"] }}</td>
+    </tr>
+</table>
+

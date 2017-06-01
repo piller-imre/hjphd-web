@@ -112,6 +112,7 @@ hjphd.controller('HjphdController',
         $scope.nappaliHallgatok = nappaliHallgatok;
         $scope.levelezoHallgatok = levelezoHallgatok;
         $scope.stipendiumHallgatok = stipendiumHallgatok;
+        $scope.absolutoriums = absolutoriums;
     }
     ]
 );
