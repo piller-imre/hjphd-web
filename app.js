@@ -107,7 +107,11 @@ hjphd.controller('HjphdController',
         }
 
         $scope.language = detectLanguage();
-        $scope.hu = true;
+
+        // Bind data to the scope
+        $scope.nappaliHallgatok = nappaliHallgatok;
+        $scope.levelezoHallgatok = levelezoHallgatok;
+        $scope.stipendiumHallgatok = stipendiumHallgatok;
     }
     ]
 );

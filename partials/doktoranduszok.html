@@ -1,5 +1,44 @@
 <h1>Doktoranduszok</h1>
 
+<h2>Nappali tagozatos hallgatók</h2>
+
 <div>
+    <ul data-ng-repeat="hallgato in nappaliHallgatok">
+        <li>
+            {{ hallgato["name"] }}
+            <div class="supervisor">
+                témavezető: {{ hallgato["supervisor"]["name"] }}, {{ hallgato["supervisor"]["title"] }}
+            </div>
+            <div data-ng-if="hallgato.hasOwnProperty('co-supervisor')" class="supervisor">
+                társtémavezető: {{ hallgato["co-supervisor"]["name"] }}, {{ hallgato["co-supervisor"]["title"] }}
+            </div>
+        </li>
+    </ul>
+</div>
+
+<h2>Levelező tagozatos hallgatók</h2>
+
+<div>
+    <ul data-ng-repeat="hallgato in levelezoHallgatok">
+        <li>
+            {{ hallgato["name"] }}
+            <div class="supervisor">
+                témavezető: {{ hallgato["supervisor"]["name"] }}, {{ hallgato["supervisor"]["title"] }}
+            </div>
+        </li>
+    </ul>
+</div>
+
+<h2>Stipendium Hungaricum hallgatók</h2>
+
+<div>
+    <ul data-ng-repeat="hallgato in stipendiumHallgatok">
+        <li>
+            {{ hallgato["name"] }}
+            <div class="supervisor">
+                témavezető: {{ hallgato["supervisor"]["name"] }}, {{ hallgato["supervisor"]["title"] }}
+            </div>
+        </li>
+    </ul>
 </div>
 
