@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="hud">
+<html>
 
 <head>
     <title>Hatvany József Informatikai Tudományok Doktori Iskola</title>
@@ -22,23 +22,42 @@
 
 <body data-ng-app="hjphd">
 
-<div class="container-fluid">
-    <div class="page-header">
-        <h1>Hatvany József Informatikai Tudományok Doktori Iskola</h1>
-        <h2>Miskolci Egyetem, Gépészmérnöki és Informatikai Kar</h2>
+<div class="container-fluid" data-ng-controller="HjphdController">
+    <div class="page-header" ng-click="toggleLanguage()">
+        <div ng-if="language == 'hu'">
+            <h1>Hatvany József Informatikai Tudományok Doktori Iskola</h1>
+            <h2>Miskolci Egyetem, Gépészmérnöki és Informatikai Kar</h2>
+        </div>
+        <div ng-if="language == 'en'">
+            <h1>HJPHD</h1>
+            <h2>University of Miskolc</h2>
+        </div>
     </div>
     <div class="row content">
         <div class="col-sm-3 sidenav">
-            <ul>
-                <li><a ui-sref="hirek">Hírek</a></li>
-                <li><a ui-sref="iskola">Doktori Iskola</a></li>
-                <li><a ui-sref="doktoranduszok">Doktoranduszok</a></li>
-                <li><a ui-sref="oktatas">Oktatás</a></li>
-                <li><a ui-sref="szabalyzatok">Szabályzatok</a></li>
-                <li><a ui-sref="ertekezesek">Doktori Értekezések</a></li>
-                <li><a ui-sref="linkek">Hasznos Linkek</a></li>
-                <li><a ui-sref="alumni">Alumni</a></li>
-            </ul>
+            <div ng-if="language == 'hu'">
+                <ul>
+                    <li><a ui-sref="hirek">Hírek</a></li>
+                    <li><a ui-sref="iskola">Doktori Iskola</a></li>
+                    <li><a ui-sref="doktoranduszok">Doktoranduszok</a></li>
+                    <li><a ui-sref="oktatas">Oktatás</a></li>
+                    <li><a ui-sref="szabalyzatok">Szabályzatok</a></li>
+                    <li><a ui-sref="ertekezesek">Doktori Értekezések</a></li>
+                    <li><a ui-sref="linkek">Hasznos Linkek</a></li>
+                    <li><a ui-sref="alumni">Alumni</a></li>
+                </ul>
+            </div>
+            <div ng-if="language == 'en'">
+                <ul>
+                    <li><a ui-sref="news">News</a></li>
+                    <li><a ui-sref="school">Doctoral School</a></li>
+                    <li><a ui-sref="students">Students</a></li>
+                    <li><a ui-sref="education">Education</a></li>
+                    <li><a ui-sref="rules">Rules</a></li>
+                    <li><a ui-sref="dissertations">Dissertations</a></li>
+                    <li><a ui-sref="links">Useful links</a></li>
+                </ul>
+            </div>
         </div>
         <div class="col-sm-9">
             <ui-view></ui-view>
