@@ -1,0 +1,42 @@
+body
+{
+    background-color: #EEEEEE;
+    /* padding: 20px;*/
+}
+
+div.page-header
+{
+    color: white;
+    background-color: #002345;
+    padding: 10px;
+    margin: 0px;
+}
+
+div.page-header > h1
+{
+    color: white;
+    margin-top: 10px;
+}
+
+div.page-header > h2
+{
+    color: white;
+    font-size: 20px;
+}
+
+div.content
+{
+    background-color: white;
+}
+
+div.sidenav
+{
+    background-color: #F8F8F8;
+    padding-top: 10px;
+}
+
+div.container-fluid
+{
+    padding: 0px;
+}
+
